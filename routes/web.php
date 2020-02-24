@@ -15,8 +15,4 @@
 
 $router->get('currencies/{id}', 'CurrencyController@show');
 $router->get('currencies/', 'CurrencyController@index');
-//$app->get('/', 'CurrencyController@index');
-
-$router->get('/', function () {
-    return 'Hello World';
-});
+$router->get('/', 'CurrencyController@index');

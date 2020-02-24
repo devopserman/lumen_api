@@ -99,12 +99,6 @@ $app->router->group([
     require __DIR__.'/../routes/web.php';
 });
 
-// $app->configureMonologUsing(function($monolog) {
-//     $handler = new StreamHandler(storage_path('logs/lumen.log'), Logger::ERROR);
-//     $handler->setFormatter(new LineFormatter(null, null, true, true));
-//     $monolog->pushHandler($handler);
-
-//     return $monolog;
-// });
+$app->withEloquent();
 
 return $app;
